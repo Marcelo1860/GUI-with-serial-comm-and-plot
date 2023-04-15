@@ -11,6 +11,7 @@
 int main()
 {
     unsigned long int temperatura = 0;
+    int contador = 0;
     
     OSCCONbits.IRCF = 0b111;        //SETEA EL CLOCK EN 8MHz
     
@@ -18,12 +19,24 @@ int main()
     init_ADC();
     HIGH_TEMP = 0x00;
     TEMP = 0x00;
+    uart_init();
+    
     while(1)
     {
+        strcpy(buffer,"   ");
         temperatura = leer_ADC();
         temperatura = temperatura*100;
         temperatura = temperatura/1023;
         temperatura = temperatura/10;
+        contador ++;
+        if (contador == 1000)
+        {
+            sprintf(buffer, "%ld", temperatura);// utiliza sprintf para convertir el número a una cadena de caracteres
+            buffer[19] = ';';
+            uart_send_text(buffer);
+            contador = 0;
+        }
+
 //        __delay_ms(100);        //Espera entre lecturas para estabilizar módulo y señal
         HIGH_TEMP = 0x00;
         TEMP = 0x00;

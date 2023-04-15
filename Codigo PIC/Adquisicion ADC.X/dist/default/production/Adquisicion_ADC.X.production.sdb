@@ -11,10 +11,16 @@
 [v _leer_ADC leer_ADC `(i  1 e 2 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"505 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\strcpy.c
+[v _strcpy strcpy `(*.4uc  1 e 1 0 ]
 "15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "6 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
@@ -23,21 +29,55 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "11 C:\universidad\Digitalizacion PIC\Codigo PIC\Adquisicion ADC.X\newmain.c
 [v _main main `(i  1 e 2 0 ]
-"64
+"77
 [v _config_HAL config_HAL `(v  1 e 1 0 ]
+"3 C:\universidad\Digitalizacion PIC\Codigo PIC\Adquisicion ADC.X\uart.c
+[v _uart_init uart_init `(v  1 e 1 0 ]
+"53
+[v _uart_receive uart_receive `(uc  1 e 1 0 ]
+"66
+[v _uart_send uart_send `(v  1 e 1 0 ]
+"89
+[v _uart_send_text uart_send_text `(v  1 e 1 0 ]
 "352 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic16f887.h
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "414
 [v _PORTE PORTE `VEuc  1 e 1 @9 ]
+"1038
+[v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
+[s S332 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"1068
+[s S341 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S345 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S348 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S351 . 1 `S332 1 . 1 0 `S341 1 . 1 0 `S345 1 . 1 0 `S348 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES351  1 e 1 @24 ]
+"1133
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1238
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
-[s S125 . 1 `uc 1 ADON 1 0 :1:0 
+[s S150 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1276
-[s S130 . 1 `uc 1 . 1 0 :1:0 
+[s S155 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -46,15 +86,15 @@
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S139 . 1 `uc 1 . 1 0 :1:0 
+[s S164 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S142 . 1 `uc 1 . 1 0 :1:0 
+[s S167 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S145 . 1 `S125 1 . 1 0 `S130 1 . 1 0 `S139 1 . 1 0 `S142 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES145  1 e 1 @31 ]
-[s S78 . 1 `uc 1 TRISA0 1 0 :1:0 
+[u S170 . 1 `S150 1 . 1 0 `S155 1 . 1 0 `S164 1 . 1 0 `S167 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES170  1 e 1 @31 ]
+[s S103 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -64,8 +104,20 @@
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "1433
-[u S87 . 1 `S78 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES87  1 e 1 @133 ]
+[u S112 . 1 `S103 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES112  1 e 1 @133 ]
+[s S252 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1557
+[u S261 . 1 `S252 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES261  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1664
@@ -84,20 +136,53 @@
 ]
 [u S33 . 1 `S22 1 . 1 0 `S28 1 . 1 0 ]
 [v _OSCCONbits OSCCONbits `VES33  1 e 1 @143 ]
+[s S273 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2582
+[s S282 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S286 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S289 . 1 `S273 1 . 1 0 `S282 1 . 1 0 `S286 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES289  1 e 1 @152 ]
+"2642
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2970
 [v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
-[s S171 . 1 `uc 1 . 1 0 :4:0 
+[s S196 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 VCFG0 1 0 :1:4 
 `uc 1 VCFG1 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "2991
-[u S177 . 1 `S171 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES177  1 e 1 @159 ]
+[u S202 . 1 `S196 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES202  1 e 1 @159 ]
+[s S310 . 1 `uc 1 ABDEN 1 0 :1:0 
+`uc 1 WUE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG16 1 0 :1:3 
+`uc 1 SCKP 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 RCIDL 1 0 :1:6 
+`uc 1 ABDOVF 1 0 :1:7 
+]
+"3352
+[u S319 . 1 `S310 1 . 1 0 ]
+[v _BAUDCTLbits BAUDCTLbits `VES319  1 e 1 @391 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
-[s S99 . 1 `uc 1 ANS0 1 0 :1:0 
+[s S124 . 1 `uc 1 ANS0 1 0 :1:0 
 `uc 1 ANS1 1 0 :1:1 
 `uc 1 ANS2 1 0 :1:2 
 `uc 1 ANS3 1 0 :1:3 
@@ -107,16 +192,107 @@
 `uc 1 ANS7 1 0 :1:7 
 ]
 "3404
-[u S108 . 1 `S99 1 . 1 0 ]
-[v _ANSELbits ANSELbits `VES108  1 e 1 @392 ]
+[u S133 . 1 `S124 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES133  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"4542
+[v _TXEN TXEN `VEb  1 e 0 @1221 ]
+"4548
+[v _TXIF TXIF `VEb  1 e 0 @100 ]
+"358 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\doprnt.c
+[v _dpowers dpowers `DC[10]ul  1 s 40 dpowers ]
+"16 C:\universidad\Digitalizacion PIC\Codigo PIC\Adquisicion ADC.X\main.h
+[v _buffer buffer `[20]uc  1 e 20 0 ]
 "11 C:\universidad\Digitalizacion PIC\Codigo PIC\Adquisicion ADC.X\newmain.c
 [v _main main `(i  1 e 2 0 ]
 {
 "13
-[v main@temperatura temperatura `ul  1 a 4 4 ]
-"62
+[v main@temperatura temperatura `ul  1 a 4 32 ]
+"14
+[v main@contador contador `i  1 a 2 30 ]
+"75
+} 0
+"89 C:\universidad\Digitalizacion PIC\Codigo PIC\Adquisicion ADC.X\uart.c
+[v _uart_send_text uart_send_text `(v  1 e 1 0 ]
+{
+[v uart_send_text@buffer buffer `*.4uc  1 a 1 wreg ]
+"91
+[v uart_send_text@aux aux `uc  1 a 1 1 ]
+"89
+[v uart_send_text@buffer buffer `*.4uc  1 a 1 wreg ]
+[v uart_send_text@buffer buffer `*.4uc  1 a 1 2 ]
+"97
+} 0
+"66
+[v _uart_send uart_send `(v  1 e 1 0 ]
+{
+[v uart_send@data data `uc  1 a 1 wreg ]
+[v uart_send@data data `uc  1 a 1 wreg ]
+"68
+[v uart_send@data data `uc  1 a 1 0 ]
+"71
+} 0
+"3
+[v _uart_init uart_init `(v  1 e 1 0 ]
+{
+"25
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\strcpy.c
+[v _strcpy strcpy `(*.4uc  1 e 1 0 ]
+{
+[v strcpy@to to `*.4uc  1 a 1 wreg ]
+"15
+[v strcpy@cp cp `*.4uc  1 a 1 2 ]
+"8
+[v strcpy@to to `*.4uc  1 a 1 wreg ]
+[v strcpy@from from `*.24DCuc  1 p 1 0 ]
+"18
+[v strcpy@to to `*.4uc  1 a 1 1 ]
+"24
+} 0
+"505 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+"545
+[v sprintf@val val `ul  1 a 4 24 ]
+"517
+[v sprintf@prec prec `i  1 a 2 20 ]
+"512
+[v sprintf@c c `uc  1 a 1 29 ]
+"525
+[v sprintf@flag flag `uc  1 a 1 23 ]
+"507
+[v sprintf@ap ap `[1]*.4v  1 a 1 22 ]
+"505
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[v sprintf@f f `*.24DCuc  1 p 1 10 ]
+"550
+[v sprintf@sp sp `*.4uc  1 a 1 28 ]
+"1567
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"10
+[v ___llmod@counter counter `uc  1 a 1 9 ]
+"5
+[v ___llmod@divisor divisor `ul  1 p 4 0 ]
+[v ___llmod@dividend dividend `ul  1 p 4 4 ]
+"25
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"30
 } 0
 "29 C:\universidad\Digitalizacion PIC\Codigo PIC\Adquisicion ADC.X\adc.c
 [v _leer_ADC leer_ADC `(i  1 e 2 0 ]
@@ -140,10 +316,10 @@
 [v set_CHANNEL@channel channel `uc  1 a 1 1 ]
 "27
 } 0
-"64 C:\universidad\Digitalizacion PIC\Codigo PIC\Adquisicion ADC.X\newmain.c
+"77 C:\universidad\Digitalizacion PIC\Codigo PIC\Adquisicion ADC.X\newmain.c
 [v _config_HAL config_HAL `(v  1 e 1 0 ]
 {
-"70
+"83
 } 0
 "15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
@@ -154,16 +330,4 @@
 [v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
 [v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
 "129
-} 0
-"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\__lldiv.c
-[v ___lldiv __lldiv `(ul  1 e 4 0 ]
-{
-"10
-[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
-"11
-[v ___lldiv@counter counter `uc  1 a 1 13 ]
-"5
-[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
-[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
-"30
 } 0

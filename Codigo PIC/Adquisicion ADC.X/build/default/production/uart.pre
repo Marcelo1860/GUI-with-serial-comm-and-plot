@@ -1,5 +1,5 @@
 
-# 1 "newmain.c"
+# 1 "uart.c"
 
 # 18 "C:\Program Files\Microchip\xc8\v2.41\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -2576,175 +2576,6 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 
-# 6 "adc.h"
-void init_ADC(void);
-void set_CHANNEL(char channel);
-int leer_ADC(void);
-
-# 4 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\__size_t.h"
-typedef unsigned size_t;
-
-# 7 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\stdlib.h"
-typedef unsigned short wchar_t;
-
-# 15
-typedef struct {
-int rem;
-int quot;
-} div_t;
-typedef struct {
-unsigned rem;
-unsigned quot;
-} udiv_t;
-typedef struct {
-long quot;
-long rem;
-} ldiv_t;
-typedef struct {
-unsigned long quot;
-unsigned long rem;
-} uldiv_t;
-
-# 65
-extern double atof(const char *);
-extern double strtod(const char *, const char **);
-extern int atoi(const char *);
-extern unsigned xtoi(const char *);
-extern long atol(const char *);
-
-# 73
-extern long strtol(const char *, char **, int);
-
-extern int rand(void);
-extern void srand(unsigned int);
-extern void * calloc(size_t, size_t);
-extern div_t div(int numer, int denom);
-extern udiv_t udiv(unsigned numer, unsigned denom);
-extern ldiv_t ldiv(long numer, long denom);
-extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-
-# 85
-extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-extern unsigned int _rotl(unsigned int value, unsigned int shift);
-extern unsigned int _rotr(unsigned int value, unsigned int shift);
-
-
-
-
-extern void * malloc(size_t);
-extern void free(void *);
-extern void * realloc(void *, size_t);
-
-# 104
-extern int atexit(void (*)(void));
-extern char * getenv(const char *);
-extern char ** environ;
-extern int system(char *);
-extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-extern int abs(int);
-extern long labs(long);
-
-extern char * itoa(char * buf, int val, int base);
-extern char * utoa(char * buf, unsigned val, int base);
-
-
-
-
-extern char * ltoa(char * buf, long val, int base);
-extern char * ultoa(char * buf, unsigned long val, int base);
-
-extern char * ftoa(float f, int * status);
-
-# 30 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\math.h"
-extern double fabs(double);
-extern double floor(double);
-extern double ceil(double);
-extern double modf(double, double *);
-extern double sqrt(double);
-extern double atof(const char *);
-extern double sin(double) ;
-extern double cos(double) ;
-extern double tan(double) ;
-extern double asin(double) ;
-extern double acos(double) ;
-extern double atan(double);
-extern double atan2(double, double) ;
-extern double log(double);
-extern double log10(double);
-extern double pow(double, double) ;
-extern double exp(double) ;
-extern double sinh(double) ;
-extern double cosh(double) ;
-extern double tanh(double);
-extern double eval_poly(double, const double *, int);
-extern double frexp(double, int *);
-extern double ldexp(double, int);
-extern double fmod(double, double);
-extern double trunc(double);
-extern double round(double);
-
-# 7 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\stdarg.h"
-typedef void * va_list[1];
-
-#pragma intrinsic(__va_start)
-extern void * __va_start(void);
-
-#pragma intrinsic(__va_arg)
-extern void * __va_arg(void *, ...);
-
-# 43 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\stdio.h"
-struct __prbuf
-{
-char * ptr;
-void (* func)(char);
-};
-
-# 29 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\errno.h"
-extern int errno;
-
-# 12 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\conio.h"
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-# 23
-extern char * cgets(char *);
-extern void cputs(const char *);
-
-# 88 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\stdio.h"
-extern int cprintf(char *, ...);
-#pragma printf_check(cprintf)
-
-
-
-extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-
-
-# 180
-#pragma printf_check(vprintf) const
-#pragma printf_check(vsprintf) const
-
-extern char * gets(char *);
-extern int puts(const char *);
-extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-
-#pragma printf_check(printf) const
-#pragma printf_check(sprintf) const
-extern int sprintf(char *, const char *, ...);
-extern int printf(const char *, ...);
-
 # 11 "uart.h"
 void uart_init(void);
 char uart_receive(void);
@@ -2754,113 +2585,100 @@ void uart_text_receive(char *buffer);
 void uart_send_text(char *buffer);
 void reinicia_uart(void);
 
-# 14 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\string.h"
-extern void * memcpy(void *, const void *, size_t);
-extern void * memmove(void *, const void *, size_t);
-extern void * memset(void *, int, size_t);
-
-# 36
-extern char * strcat(char *, const char *);
-extern char * strcpy(char *, const char *);
-extern char * strncat(char *, const char *, size_t);
-extern char * strncpy(char *, const char *, size_t);
-extern char * strdup(const char *);
-extern char * strtok(char *, const char *);
-
-
-extern int memcmp(const void *, const void *, size_t);
-extern int strcmp(const char *, const char *);
-extern int stricmp(const char *, const char *);
-extern int strncmp(const char *, const char *, size_t);
-extern int strnicmp(const char *, const char *, size_t);
-extern void * memchr(const void *, int, size_t);
-extern size_t strcspn(const char *, const char *);
-extern char * strpbrk(const char *, const char *);
-extern size_t strspn(const char *, const char *);
-extern char * strstr(const char *, const char *);
-extern char * stristr(const char *, const char *);
-extern char * strerror(int);
-extern size_t strlen(const char *);
-extern char * strchr(const char *, int);
-extern char * strichr(const char *, int);
-extern char * strrchr(const char *, int);
-extern char * strrichr(const char *, int);
-
-# 16 "main.h"
-char buffer[20] = " ";
-void config_HAL(void);
-
-# 11 "newmain.c"
-int main()
+# 3 "uart.c"
+void uart_init(void)
 {
-unsigned long int temperatura = 0;
-int contador = 0;
 
-OSCCONbits.IRCF = 0b111;
+TRISCbits.TRISC6 = 0;
+TRISCbits.TRISC7 = 1;
+TXSTAbits.BRGH = 0;
+BAUDCTLbits.BRG16 = 1;
 
-config_HAL();
-init_ADC();
-PORTE = 0x00;
-PORTD = 0x00;
-uart_init();
+# 20
+SPBRG = 51;
+TXSTAbits.SYNC = 0;
+RCSTAbits.SPEN = 1;
+RCSTA = 0b10010000;
 
+}
+
+
+char uart_receive_1(void)
+{
+unsigned int conta = 0;
+char salida = 0;
+if(RCSTAbits.OERR)
+{
+RCSTAbits.CREN = 0;
+RCSTAbits.CREN = 1;
+}
+while(!RCIF && (conta != 1000))
+{
+conta++;
+_delay((unsigned long)((100)*(8000000/4000000.0)));
+}
+if(conta != 1000)
+{
+RCIF = 0;
+salida = RCREG;
+}else
+{
+salida = 255;
+}
+return salida;
+}
+
+char uart_receive(void)
+{
+do{
+if(RCSTAbits.OERR)
+{
+RCSTAbits.CREN = 0;
+RCSTAbits.CREN = 1;
+}
+}while(!RCIF);
+RCIF = 0;
+return RCREG;
+}
+
+void uart_send(char data)
+{
+TXEN = 1;
+while (TXIF == 0);
+TXREG = data;
+}
+
+void uart_text_receive(char *buffer)
+{
 while(1)
 {
-strcpy(buffer,"   ");
-temperatura = leer_ADC();
-temperatura = temperatura*100;
-temperatura = temperatura/1023;
-temperatura = temperatura/10;
-contador ++;
-if (contador == 1000)
+*buffer = uart_receive();
+if(*buffer == ';')
 {
-sprintf(buffer, "%ld", temperatura);
-buffer[19] = ';';
-uart_send_text(buffer);
-contador = 0;
-}
-
-
-PORTE = 0x00;
-PORTD = 0x00;
-switch(temperatura)
-{
-case 10:
-PORTE |= 0x03;
-case 9:
-PORTE |= 0x01;
-case 8:
-if(temperatura<9)
-{
-PORTE = 0x00;
-}
-PORTD |= 0xFF;
-case 7:
-PORTD |= 0xFF>>1;
-case 6:
-PORTD |= 0xFF>>2;
-case 5:
-PORTD |= 0xFF>>3;
-case 4:
-PORTD |= 0xFF>>4;
-case 3:
-PORTD |= 0xFF>>5;
-case 2:
-PORTD |= 0xFF>>6;
-case 1:
-PORTD |= 0xFF>>7;
 break;
 }
+else{
+buffer++;
+}
+}
 
 }
 
-return (0);
-}
-
-void config_HAL(void)
+void uart_send_text(char *buffer)
 {
-TRISD = 0x00;
-TRISE = 0x00;
-ANSEL = 0x00;
-ANSELH = 0x00;
+char aux;
+do{
+aux = *buffer;
+uart_send(aux);
+buffer++;
+}while(*buffer != ';');
+}
+
+
+void reinicia_uart(void)
+{
+RCSTAbits.SPEN = 0;
+RCSTAbits.CREN = 0;
+RCSTAbits.SPEN = 1;
+RCSTAbits.CREN = 1;
 }
