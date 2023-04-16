@@ -93,7 +93,9 @@ void uart_send_text(char *buffer)
         aux = *buffer;
         uart_send(aux);
         buffer++;
-    }while(*buffer != ';');              //EL TERMINAL VIRTUAL NO ENVIA CORRECTAMENTE EL '\0'
+    }while(*buffer != ';');//EL TERMINAL VIRTUAL NO ENVIA CORRECTAMENTE EL '\0'
+    uart_send('\r');
+    uart_send('\n');
 }
 
 

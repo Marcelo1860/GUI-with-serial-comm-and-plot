@@ -1865,31 +1865,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;uart.c: 96: }while(*buffer != ';');
 [e $ != -> *U _buffer `ui -> 59 `ui 164  ]
 [e :U 163 ]
-[; ;uart.c: 97: }
+[; ;uart.c: 97: uart_send('\r');
 "97
+[e ( _uart_send (1 -> -> 13 `ui `uc ]
+[; ;uart.c: 98: uart_send('\n');
+"98
+[e ( _uart_send (1 -> -> 10 `ui `uc ]
+[; ;uart.c: 99: }
+"99
 [e :UE 161 ]
 }
-"100
+"102
 [v _reinicia_uart `(v ~T0 @X0 1 ef ]
-"101
+"103
 {
-[; ;uart.c: 100: void reinicia_uart(void)
-[; ;uart.c: 101: {
+[; ;uart.c: 102: void reinicia_uart(void)
+[; ;uart.c: 103: {
 [e :U _reinicia_uart ]
 [f ]
-[; ;uart.c: 102: RCSTAbits.SPEN = 0;
-"102
-[e = . . _RCSTAbits 0 7 -> -> 0 `i `uc ]
-[; ;uart.c: 103: RCSTAbits.CREN = 0;
-"103
-[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
-[; ;uart.c: 104: RCSTAbits.SPEN = 1;
+[; ;uart.c: 104: RCSTAbits.SPEN = 0;
 "104
-[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-[; ;uart.c: 105: RCSTAbits.CREN = 1;
+[e = . . _RCSTAbits 0 7 -> -> 0 `i `uc ]
+[; ;uart.c: 105: RCSTAbits.CREN = 0;
 "105
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-[; ;uart.c: 106: }
+[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
+[; ;uart.c: 106: RCSTAbits.SPEN = 1;
 "106
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
+[; ;uart.c: 107: RCSTAbits.CREN = 1;
+"107
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+[; ;uart.c: 108: }
+"108
 [e :UE 165 ]
 }

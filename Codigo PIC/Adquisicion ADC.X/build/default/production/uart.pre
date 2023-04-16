@@ -2672,6 +2672,8 @@ aux = *buffer;
 uart_send(aux);
 buffer++;
 }while(*buffer != ';');
+uart_send('\r');
+uart_send('\n');
 }
 
 

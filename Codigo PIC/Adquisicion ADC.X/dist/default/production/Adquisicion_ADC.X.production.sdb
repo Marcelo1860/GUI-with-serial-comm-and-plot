@@ -222,7 +222,7 @@
 "89
 [v uart_send_text@buffer buffer `*.4uc  1 a 1 wreg ]
 [v uart_send_text@buffer buffer `*.4uc  1 a 1 2 ]
-"97
+"99
 } 0
 "66
 [v _uart_send uart_send `(v  1 e 1 0 ]
