@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_19.obj
+$C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_19.obj
 end_init CODE 0 0 0 3 2 1
 config CONFIG 4 2007 2007 2 2 1
 $dist/default/production\Adquisicion_ADC.X.production.obj
@@ -80,21 +80,21 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Adquisicion_ADC.X.production.obj
-7F0 cinit CODE >1067:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7F0 cinit CODE >1070:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7F0 cinit CODE >1111:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7F1 cinit CODE >1112:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7F2 cinit CODE >1113:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7F3 cinit CODE >1114:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7F4 cinit CODE >1115:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7F5 cinit CODE >1116:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7F6 cinit CODE >1117:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7F7 cinit CODE >1118:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7F8 cinit CODE >1119:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7F9 cinit CODE >1120:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7FC cinit CODE >1126:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7FC cinit CODE >1128:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-7FD cinit CODE >1129:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
+7F0 cinit CODE >1067:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7F0 cinit CODE >1070:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7F0 cinit CODE >1111:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7F1 cinit CODE >1112:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7F2 cinit CODE >1113:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7F3 cinit CODE >1114:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7F4 cinit CODE >1115:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7F5 cinit CODE >1116:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7F6 cinit CODE >1117:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7F7 cinit CODE >1118:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7F8 cinit CODE >1119:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7F9 cinit CODE >1120:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7FC cinit CODE >1126:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7FC cinit CODE >1128:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+7FD cinit CODE >1129:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
 46D text12 CODE >15:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\Umul32.c
 46D text12 CODE >119:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\Umul32.c
 475 text12 CODE >121:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\Umul32.c
@@ -335,23 +335,23 @@ $dist/default/production\Adquisicion_ADC.X.production.obj
 6BB maintext CODE >43:C:\universidad\Digitalizacion PIC\Codigo PIC\Adquisicion ADC.X\newmain.c
 6BE maintext CODE >43:C:\universidad\Digitalizacion PIC\Codigo PIC\Adquisicion ADC.X\newmain.c
 6C3 maintext CODE >43:C:\universidad\Digitalizacion PIC\Codigo PIC\Adquisicion ADC.X\newmain.c
-3E9 inittext CODE >1085:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3E9 inittext CODE >1086:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3EA inittext CODE >1087:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3EB inittext CODE >1088:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3EC inittext CODE >1089:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3ED inittext CODE >1096:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3ED inittext CODE >1097:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3F0 inittext CODE >1098:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3F1 inittext CODE >1099:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3F2 inittext CODE >1100:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3F3 inittext CODE >1101:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3F4 inittext CODE >1102:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3F5 inittext CODE >1103:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3F6 inittext CODE >1104:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3F7 inittext CODE >1105:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3F8 inittext CODE >1106:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
-3F9 inittext CODE >1107:C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_1.as
+3E9 inittext CODE >1085:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3E9 inittext CODE >1086:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3EA inittext CODE >1087:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3EB inittext CODE >1088:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3EC inittext CODE >1089:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3ED inittext CODE >1096:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3ED inittext CODE >1097:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3F0 inittext CODE >1098:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3F1 inittext CODE >1099:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3F2 inittext CODE >1100:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3F3 inittext CODE >1101:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3F4 inittext CODE >1102:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3F5 inittext CODE >1103:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3F6 inittext CODE >1104:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3F7 inittext CODE >1105:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3F8 inittext CODE >1106:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
+3F9 inittext CODE >1107:C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_1.as
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -377,21 +377,21 @@ __L__absolute__ 0 0 ABS 0 __absolute__ -
 __Hstrings 0 0 ABS 0 strings -
 _TXEN 4C5 0 ABS 0 - dist/default/production\Adquisicion_ADC.X.production.obj
 _TXIF 64 0 ABS 0 - dist/default/production\Adquisicion_ADC.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_19.obj
+___sp 0 0 STACK 2 stack C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_19.obj
 _main B68 0 CODE 0 maintext dist/default/production\Adquisicion_ADC.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\Adquisicion_ADC.X.production.obj
-start 0 0 CODE 0 init C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_19.obj
+start 0 0 CODE 0 init C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_19.obj
 ?___lmul 70 0 COMMON 1 cstackCOMMON dist/default/production\Adquisicion_ADC.X.production.obj
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
 main@contador 3E 0 BANK0 1 cstackBANK0 dist/default/production\Adquisicion_ADC.X.production.obj
 leer_ADC@lectura 20 0 BANK0 1 cstackBANK0 dist/default/production\Adquisicion_ADC.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_19.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_19.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_19.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_19.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_19.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_19.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_19.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_19.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_19.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_19.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_19.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_19.obj
 _init_ADC 896 0 CODE 0 text9 dist/default/production\Adquisicion_ADC.X.production.obj
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Adquisicion_ADC.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\Adquisicion_ADC.X.production.obj
@@ -410,8 +410,8 @@ __Lmaintext 0 0 ABS 0 maintext -
 leer_ADC@i 22 0 BANK0 1 cstackBANK0 dist/default/production\Adquisicion_ADC.X.production.obj
 __end_of___lldiv B68 0 CODE 0 text7 dist/default/production\Adquisicion_ADC.X.production.obj
 __end_of___llmod 9F0 0 CODE 0 text6 dist/default/production\Adquisicion_ADC.X.production.obj
-___stackhi 0 0 ABS 0 - C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_19.obj
-___stacklo 0 0 ABS 0 - C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_19.obj
+___stackhi 0 0 ABS 0 - C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_19.obj
+___stacklo 0 0 ABS 0 - C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_19.obj
 _dpowers 12 0 STRING 0 strings dist/default/production\Adquisicion_ADC.X.production.obj
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\Adquisicion_ADC.X.production.obj
 uart_send_text@buffer 72 0 COMMON 1 cstackCOMMON dist/default/production\Adquisicion_ADC.X.production.obj
@@ -422,7 +422,7 @@ _TRISAbits 85 0 ABS 0 - dist/default/production\Adquisicion_ADC.X.production.obj
 _TRISCbits 87 0 ABS 0 - dist/default/production\Adquisicion_ADC.X.production.obj
 ___lldiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\Adquisicion_ADC.X.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Adquisicion_ADC.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_19.obj
+___int_sp 0 0 STACK 2 stack C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_19.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -473,7 +473,7 @@ strcpy@to 71 0 COMMON 1 cstackCOMMON dist/default/production\Adquisicion_ADC.X.p
 __Lintentry 0 0 CODE 0 intentry -
 ___lldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\Adquisicion_ADC.X.production.obj
 __stringtab 6 0 STRING 0 strings dist/default/production\Adquisicion_ADC.X.production.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Baders\AppData\Local\Temp\xcAsks0.\driver_tmp_19.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Baders\AppData\Local\Temp\xcAsnp0.\driver_tmp_19.obj
 __pdataBANK0 44 0 BANK0 1 dataBANK0 dist/default/production\Adquisicion_ADC.X.production.obj
 _RCSTAbits 18 0 ABS 0 - dist/default/production\Adquisicion_ADC.X.production.obj
 sprintf@flag 37 0 BANK0 1 cstackBANK0 dist/default/production\Adquisicion_ADC.X.production.obj
