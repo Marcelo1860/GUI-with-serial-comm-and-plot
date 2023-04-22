@@ -1,23 +1,20 @@
-/* 
- * File:   uart.h
- * Author: Baders
- *
- * Created on 22 de abril de 2023, 13:42
- */
-
 #ifndef UART_H
 #define	UART_H
 
-#ifdef	__cplusplus
-extern "C" {
+
+#ifndef _XTAL_FREQ
+#define _XTAL_FREQ 8000000
 #endif
 
+#include <xc.h>
 
-
-
-#ifdef	__cplusplus
-}
-#endif
+void uart_init(void);
+char uart_receive(void);
+char uart_receive_1(void);
+void uart_send(char data);
+void uart_text_receive(char *buffer);
+void uart_send_text(char *buffer);
+void reinicia_uart(void);
 
 #endif	/* UART_H */
 

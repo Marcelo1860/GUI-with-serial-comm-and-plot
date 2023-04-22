@@ -1,23 +1,14 @@
-/* 
- * File:   adc.h
- * Author: Baders
- *
- * Created on 22 de abril de 2023, 13:39
- */
-
 #ifndef ADC_H
 #define	ADC_H
+#define _XTAL_FREQ 8000000
+#include <xc.h>
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
+void init_ADC(void);
+void set_CHANNEL(char channel);
+int leer_ADC(void);
 
 
-
-
-#ifdef	__cplusplus
-}
-#endif
 
 #endif	/* ADC_H */
+
 

@@ -1,23 +1,21 @@
-/* 
- * File:   main.h
- * Author: Baders
- *
- * Created on 22 de abril de 2023, 13:39
- */
-
 #ifndef MAIN_H
 #define	MAIN_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
+#define _XTAL_FREQ 8000000
+#include <xc.h>
+#include "adc.h"
+#include <stdlib.h>
+#include <math.h>
+#include <stdio.h>
+#include "uart.h"
+#include <string.h>
+#include "inttimer.h"
 
+#define HIGH_TEMP PORTE
+#define TEMP PORTD
 
+char buffer[20] = " ";
+void config_HAL(void);
 
-
-#ifdef	__cplusplus
-}
-#endif
 
 #endif	/* MAIN_H */
-
