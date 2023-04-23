@@ -1,4 +1,4 @@
-#include "inttimer.h"
+#include "inttimer1.h"
 
 
 void init_inttimer(void){
@@ -8,9 +8,11 @@ void init_inttimer(void){
     T1CONbits.T1SYNC = 0; // No sincronizar con reloj externo
     TMR1H = 0xFF; // Cargar el valor de cuenta inicial para generar interrupciones cada 25 us
     TMR1L = 0xE7;
-    PIR1bits.TMR1IF = 0; // Limpiar la bandera de interrupción
-    PIE1bits.TMR1IE = 1; // Habilitar las interrupciones del temporizador 1
-    INTCONbits.PEIE = 1; // Habilitar las interrupciones periféricas
+    //PIR1bits.TMR1IF = 0; // Limpiar la bandera de interrupciï¿½n
+    //PIE1bits.TMR1IE = 1; // Habilitar las interrupciones del temporizador 1
+    PIR1bits.ADIF = 0; // Limpiar la bandera de interrupciï¿½n
+    PIE1bits.ADIE = 1; // Habilitar las interrupciones del ADC
+    INTCONbits.PEIE = 1; // Habilitar las interrupciones perifï¿½ricas
     INTCONbits.GIE = 1; // Habilitar las interrupciones globales
-    T1CONbits.TMR1ON = 1; // Encender el temporizador 1
+    //T1CONbits.TMR1ON = 1; // Encender el temporizador 1
 }

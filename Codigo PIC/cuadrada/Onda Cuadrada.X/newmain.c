@@ -6,72 +6,63 @@
  */
 
 
-#include "main.h"
+#include "main1.h"
 
+// Variables globales
+volatile unsigned int muestras[40]; // Array para almacenar las muestras
+volatile unsigned char contador = 0; // Contador de muestras
+volatile unsigned int stop = 999;
 int main()
 {
-    unsigned long int temperatura = 0;
-    int contador = 0;
-    
+
     OSCCONbits.IRCF = 0b111;        //SETEA EL CLOCK EN 8MHz
     
     config_HAL();
     init_ADC();
-    HIGH_TEMP = 0x00;
-    TEMP = 0x00;
     uart_init();
+    init_inttimer();
+    ADCON0bits.GO = 1;
     
     while(1)
     {
-        strcpy(buffer,"   ");
-        temperatura = leer_ADC();
-        temperatura = temperatura*100;
-        temperatura = temperatura/1023;
-        temperatura = temperatura/10;
-        contador ++;
-        if (contador == 1000)
-        {
-            sprintf(buffer, "%ld", temperatura);// utiliza sprintf para convertir el número a una cadena de caracteres
-            buffer[19] = ';';
-            uart_send_text(buffer);
-            contador = 0;
-        }
-
-//        __delay_ms(100);        //Espera entre lecturas para estabilizar módulo y señal
-        HIGH_TEMP = 0x00;
-        TEMP = 0x00;
-        switch(temperatura)
-        {
-            case 10:
-                HIGH_TEMP |= 0x03;
-            case 9:
-                HIGH_TEMP |= 0x01;
-            case 8:
-                if(temperatura<9)
-                    {
-                    HIGH_TEMP = 0x00;
-                    }
-                TEMP |= 0xFF;
-            case 7:
-                TEMP |= 0xFF>>1;
-            case 6:
-                TEMP |= 0xFF>>2;
-            case 5:
-                TEMP |= 0xFF>>3;
-            case 4:
-                TEMP |= 0xFF>>4;
-            case 3:
-                TEMP |= 0xFF>>5;
-            case 2:
-                TEMP |= 0xFF>>6;
-            case 1:
-                TEMP |= 0xFF>>7;
-                break;      
-        }
         
+        // Esperar a que se adquieran las 40 muestras
+        while (contador < 40);
+        //PIE1bits.TMR1IE = 0;//se desactiva interrupcon del timer1
+        PIE1bits.ADIE = 0; // deshabilitar las interrupciones del ADC
+        // Hacer algo con las muestras
+        for(int i=0; i<=40; i++){
+            strcpy(buffer,"   ");
+            sprintf(buffer, "%ld", muestras[i]);// utiliza sprintf para convertir el nï¿½mero a una cadena de caracteres
+            buffer[19] = ';';
+            uart_send_text(buffer);    
+        }
+        strcpy(buffer,"   ");
+        sprintf(buffer, "%ld",stop );// utiliza sprintf para convertir el nï¿½mero a una cadena de caracteres
+        buffer[19] = ';';
+        uart_send_text(buffer); 
+
+        
+        // Reiniciar el contador y el proceso de adquisiciï¿½n de muestras
+        contador = 0;
+        ADCON0bits.GO = 1;
+        //PIE1bits.TMR1IE = 1;//se activa interrupcon del timer1
+        PIE1bits.ADIE = 1; // Habilitar las interrupciones del ADC
     } 
 
     return (0);
+}
+
+void interrupt TMR1_ISR() {
+        PIR1bits.ADIF = 0; // Limpiar la bandera de interrupciÃ³n del ADC
+        muestras[contador] = ((ADRESH << 8) & 0b1100000000) | ADRESL; // Almacenar el valor de ADRESH y ADRESL en el array de muestras
+        //muestras[contador] = ADRESH;
+        contador++; // Incrementar el contador de muestras
+        if (contador < 40) {
+            ADCON0bits.GO = 1; // Iniciar la siguiente conversiï¿½n
+        }
+
+    //PIR1bits.TMR1IF = 0; // Limpiar la bandera de interrupciï¿½n del temporizador 1
 }
 
 void config_HAL(void)

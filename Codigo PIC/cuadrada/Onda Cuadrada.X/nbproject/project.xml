@@ -6,12 +6,12 @@
             <name>Onda Cuadrada</name>
             <creation-uuid>2a83a5a4-4d31-4e09-90ad-21ca4de36349</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions/>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
-            <make-dep-projects/>
             <sourceEncoding>UTF-8</sourceEncoding>
+            <make-dep-projects/>
         </data>
     </configuration>
 </project>

@@ -1,4 +1,4 @@
-#include "uart.h"
+#include "uart1.h"
 
 void uart_init(void)
 {
@@ -12,9 +12,9 @@ void uart_init(void)
     /*con esto la formula del baudrate es:
      * BaudRate = Fosc/(64*([SPBRGHx:SPBRGx]+1))
      * [SPBRGHx:SPBRGx] =  (Fosc/(16*BaudRate))-1
-     * Fosc = 8000000                           20MHz
+     * Fosc = 4000000                           20MHz
      * BaudRate = 9600                          9600
-     * [SPBRGH:SPBRG] = 51.083333 ~= 51         129.2 ~= 130
+     * [SPBRGH:SPBRG] = 25.041 ~= 25         129.2 ~= 130
      */
 
     SPBRG = 51;                   //SETEO EL BAUDRATE EN 9600

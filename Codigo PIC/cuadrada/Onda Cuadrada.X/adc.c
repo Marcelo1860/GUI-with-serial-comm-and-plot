@@ -1,4 +1,4 @@
-#include "adc.h"
+#include "adc1.h"
 
 void init_ADC(void)
 {
@@ -12,6 +12,7 @@ void init_ADC(void)
     ADCON1bits.VCFG1 = 0;       //REFERENCIA NEGATIVA A VSS
     ADCON1bits.VCFG0 = 0;       //REFERENCIA POSITIVA A VDD
     ADCON0bits.ADON = 1;        // ENCIENDE EL MODULO
+
     __delay_ms(100);        
 }
 
@@ -29,7 +30,6 @@ void set_CHANNEL(unsigned char channel)
 int leer_ADC(void)
 {
     int lectura, i = 0;
-    ADCON0bits.GO = 1; //inicio medicion
     ADCON0bits.GO_DONE = 1;
     do{
         if(ADCON1bits.ADFM == 1)

@@ -3,13 +3,13 @@
 
 #define _XTAL_FREQ 8000000
 #include <xc.h>
-#include "adc.h"
+#include "adc1.h"
 #include <stdlib.h>
 #include <math.h>
 #include <stdio.h>
-#include "uart.h"
+#include "uart1.h"
 #include <string.h>
-#include "inttimer.h"
+#include "inttimer1.h"
 
 #define HIGH_TEMP PORTE
 #define TEMP PORTD
