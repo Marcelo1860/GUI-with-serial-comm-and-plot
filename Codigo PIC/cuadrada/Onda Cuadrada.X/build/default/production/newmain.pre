@@ -2796,7 +2796,8 @@ void config_HAL(void);
 # 12 "newmain.c"
 volatile unsigned int muestras[40];
 volatile unsigned char contador = 0;
-volatile unsigned int stop = 999;
+volatile float stop = 1;
+volatile float datoenv = 0;
 int main()
 {
 
@@ -2818,12 +2819,13 @@ PIE1bits.ADIE = 0;
 
 for(int i=0; i<=40; i++){
 strcpy(buffer,"   ");
-sprintf(buffer, "%ld", muestras[i]);
+datoenv = muestras[i]*(5.0/1023.0);
+sprintf(buffer, "%f", datoenv);
 buffer[19] = ';';
 uart_send_text(buffer);
 }
 strcpy(buffer,"   ");
-sprintf(buffer, "%ld",stop );
+sprintf(buffer, "%f",stop );
 buffer[19] = ';';
 uart_send_text(buffer);
 

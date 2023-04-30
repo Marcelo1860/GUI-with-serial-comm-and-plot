@@ -11,7 +11,8 @@
 // Variables globales
 volatile unsigned int muestras[40]; // Array para almacenar las muestras
 volatile unsigned char contador = 0; // Contador de muestras
-volatile unsigned int stop = 999;
+volatile float stop = 1;
+volatile float datoenv = 0;
 int main()
 {
 
@@ -33,12 +34,13 @@ int main()
         // Hacer algo con las muestras
         for(int i=0; i<=40; i++){
             strcpy(buffer,"   ");
-            sprintf(buffer, "%ld", muestras[i]);// utiliza sprintf para convertir el n�mero a una cadena de caracteres
+            datoenv = muestras[i]*(5.0/1023.0);
+            sprintf(buffer, "%f", datoenv);// utiliza sprintf para convertir el n�mero a una cadena de caracteres
             buffer[19] = ';';
             uart_send_text(buffer);    
         }
         strcpy(buffer,"   ");
-        sprintf(buffer, "%ld",stop );// utiliza sprintf para convertir el n�mero a una cadena de caracteres
+        sprintf(buffer, "%f",stop );// utiliza sprintf para convertir el n�mero a una cadena de caracteres
         buffer[19] = ';';
         uart_send_text(buffer); 
 
