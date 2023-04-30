@@ -4,8 +4,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/universidad/Digitalizacion%20PIC/Codigo%20PIC/cuadrada/Onda%20Cuadrada.X/adc.c</file>
-            <file>file:/C:/universidad/Digitalizacion%20PIC/Codigo%20PIC/cuadrada/Onda%20Cuadrada.X/adc.h</file>
+            <file>file:/C:/universidad/Digitalizacion%20PIC/Codigo%20PIC/cuadrada/Onda%20Cuadrada.X/inttimer1.h</file>
+            <file>file:/C:/universidad/Digitalizacion%20PIC/Codigo%20PIC/cuadrada/Onda%20Cuadrada.X/main1.h</file>
+            <file>file:/C:/universidad/Digitalizacion%20PIC/Codigo%20PIC/cuadrada/Onda%20Cuadrada.X/uart1.h</file>
+            <file>file:/C:/universidad/Digitalizacion%20PIC/Codigo%20PIC/cuadrada/Onda%20Cuadrada.X/adc1.h</file>
+            <file>file:/C:/universidad/Digitalizacion%20PIC/Codigo%20PIC/cuadrada/Onda%20Cuadrada.X/inttimer.c</file>
             <file>file:/C:/universidad/Digitalizacion%20PIC/Codigo%20PIC/cuadrada/Onda%20Cuadrada.X/newmain.c</file>
+            <file>file:/C:/universidad/Digitalizacion%20PIC/Codigo%20PIC/cuadrada/Onda%20Cuadrada.X/fuses.c</file>
+            <file>file:/C:/universidad/Digitalizacion%20PIC/Codigo%20PIC/cuadrada/Onda%20Cuadrada.X/uart.c</file>
         </group>
     </open-files>
 </project-private>
