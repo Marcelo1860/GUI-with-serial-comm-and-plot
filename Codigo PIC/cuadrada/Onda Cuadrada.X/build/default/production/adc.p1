@@ -1582,9 +1582,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc.c: 9: set_CHANNEL(0);
 "9
 [e ( _set_CHANNEL (1 -> -> 0 `i `uc ]
-[; ;adc.c: 10: ADCON0bits.ADCS = 0b010;
+[; ;adc.c: 10: ADCON0bits.ADCS = 0b001;
 "10
-[e = . . _ADCON0bits 0 3 -> -> 2 `i `uc ]
+[e = . . _ADCON0bits 0 3 -> -> 1 `i `uc ]
 [; ;adc.c: 11: ADCON1bits.ADFM = 1;
 "11
 [e = . . _ADCON1bits 0 4 -> -> 1 `i `uc ]

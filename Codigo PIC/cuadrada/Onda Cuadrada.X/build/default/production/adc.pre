@@ -2589,7 +2589,7 @@ void init_ADC(void)
 TRISAbits.TRISA0 = 1;
 ANSELbits.ANS0 = 1;
 set_CHANNEL(0);
-ADCON0bits.ADCS = 0b010;
+ADCON0bits.ADCS = 0b001;
 ADCON1bits.ADFM = 1;
 ADCON1bits.VCFG1 = 0;
 ADCON1bits.VCFG0 = 0;

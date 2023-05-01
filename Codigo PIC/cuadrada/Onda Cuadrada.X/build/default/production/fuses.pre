@@ -2,8 +2,8 @@
 # 1 "fuses.c"
 
 
-# 6
-#pragma config FOSC = INTRC_NOCLKOUT
+# 7
+#pragma config FOSC = XT
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = OFF

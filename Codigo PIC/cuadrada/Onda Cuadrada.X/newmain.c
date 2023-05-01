@@ -16,8 +16,11 @@ volatile float datoenv = 0;
 int main()
 {
 
-    OSCCONbits.IRCF = 0b111;        //SETEA EL CLOCK EN 8MHz
-    
+    //OSCCONbits.IRCF = 0b111;        //SETEA EL CLOCK EN 8MHz
+    OSCCONbits.OSTS = 1;
+    OSCCONbits.HTS = 0;
+    OSCCONbits.HTS = 0;
+    OSCCONbits.SCS = 0;
     config_HAL();
     init_ADC();
     uart_init();

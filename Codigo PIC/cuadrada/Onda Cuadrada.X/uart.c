@@ -12,9 +12,9 @@ void uart_init(void)
     /*con esto la formula del baudrate es:
      * BaudRate = Fosc/(64*([SPBRGHx:SPBRGx]+1))
      * [SPBRGHx:SPBRGx] =  (Fosc/(16*BaudRate))-1
-     * Fosc = 4000000                           20MHz
-     * BaudRate = 9600                          9600
-     * [SPBRGH:SPBRG] = 25.041 ~= 25         129.2 ~= 130
+     * Fosc = 4000000                           20MHz       8MHZ
+     * BaudRate = 9600                          9600        9600
+     * [SPBRGH:SPBRG] = 25.041 ~= 25         129.2 ~= 130     51
      */
 
     SPBRG = 51;                   //SETEO EL BAUDRATE EN 9600

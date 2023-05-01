@@ -1,27 +1,27 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"6 fuses.c
-[p x FOSC=INTRC_NOCLKOUT ]
-"7
-[p x WDTE=OFF ]
+"7 fuses.c
+[p x FOSC=XT ]
 "8
-[p x PWRTE=OFF ]
+[p x WDTE=OFF ]
 "9
-[p x MCLRE=OFF ]
+[p x PWRTE=OFF ]
 "10
-[p x CP=OFF ]
+[p x MCLRE=OFF ]
 "11
-[p x CPD=OFF ]
+[p x CP=OFF ]
 "12
-[p x BOREN=OFF ]
+[p x CPD=OFF ]
 "13
-[p x IESO=OFF ]
+[p x BOREN=OFF ]
 "14
-[p x FCMEN=OFF ]
+[p x IESO=OFF ]
 "15
+[p x FCMEN=OFF ]
+"16
 [p x LVP=OFF ]
-"18
-[p x BOR4V=BOR40V ]
 "19
+[p x BOR4V=BOR40V ]
+"20
 [p x WRT=OFF ]
 [; ;xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc.h: 20: extern double __fpnormalize(double);
