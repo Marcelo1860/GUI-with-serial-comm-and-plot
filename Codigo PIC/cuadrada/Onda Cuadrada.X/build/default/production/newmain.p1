@@ -1798,12 +1798,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;newmain.c: 31: {
 "31
 {
-[; ;newmain.c: 34: while (contador < 40);
+[; ;newmain.c: 34: while (contador < 41);
 "34
 [e $U 147  ]
 [e :U 148 ]
 [e :U 147 ]
-[e $ < -> _contador `i -> 40 `i 148  ]
+[e $ < -> _contador `i -> 41 `i 148  ]
 [e :U 149 ]
 [; ;newmain.c: 36: PIE1bits.ADIE = 0;
 "36
@@ -1841,18 +1841,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 "44
 }
 [; ;newmain.c: 44: }
-[; ;newmain.c: 45: strcpy(buffer,"   ");
-"45
-[e ( _strcpy (2 , &U _buffer :s 3C ]
-[; ;newmain.c: 46: sprintf(buffer, "%f",stop );
-"46
-[e ( _sprintf (1 , (. , &U _buffer :s 4C -> _stop `d ]
-[; ;newmain.c: 47: buffer[19] = ';';
-"47
-[e = *U + &U _buffer * -> -> -> 19 `i `ui `ux -> -> # *U &U _buffer `ui `ux -> -> 59 `ui `uc ]
-[; ;newmain.c: 48: uart_send_text(buffer);
-"48
-[e ( _uart_send_text (1 &U _buffer ]
 [; ;newmain.c: 52: contador = 0;
 "52
 [e = _contador -> -> 0 `i `uc ]
@@ -1894,9 +1882,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;newmain.c: 65: contador++;
 "65
 [e ++ _contador -> -> 1 `i `uc ]
-[; ;newmain.c: 66: if (contador < 40) {
+[; ;newmain.c: 66: if (contador < 41) {
 "66
-[e $ ! < -> _contador `i -> 40 `i 154  ]
+[e $ ! < -> _contador `i -> 41 `i 154  ]
 {
 [; ;newmain.c: 67: ADCON0bits.GO = 1;
 "67
@@ -1935,6 +1923,4 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [p f _sprintf 8396800 ]
 [a 2C 37 102 0 ]
-[a 4C 37 102 0 ]
 [a 1C 32 32 32 0 ]
-[a 3C 32 32 32 0 ]

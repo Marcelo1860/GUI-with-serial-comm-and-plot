@@ -31,7 +31,7 @@ int main()
     {
         
         // Esperar a que se adquieran las 40 muestras
-        while (contador < 40);
+        while (contador < 41);
         //PIE1bits.TMR1IE = 0;//se desactiva interrupcon del timer1
         PIE1bits.ADIE = 0; // deshabilitar las interrupciones del ADC
         // Hacer algo con las muestras
@@ -42,10 +42,10 @@ int main()
             buffer[19] = ';';
             uart_send_text(buffer);    
         }
-        strcpy(buffer,"   ");
+        /*strcpy(buffer,"   ");
         sprintf(buffer, "%f",stop );// utiliza sprintf para convertir el n�mero a una cadena de caracteres
         buffer[19] = ';';
-        uart_send_text(buffer); 
+        uart_send_text(buffer); */
 
         
         // Reiniciar el contador y el proceso de adquisici�n de muestras
@@ -63,7 +63,7 @@ void interrupt TMR1_ISR() {
         muestras[contador] = ((ADRESH << 8) & 0b1100000000) | ADRESL; // Almacenar el valor de ADRESH y ADRESL en el array de muestras
         //muestras[contador] = ADRESH;
         contador++; // Incrementar el contador de muestras
-        if (contador < 40) {
+        if (contador < 41) {
             ADCON0bits.GO = 1; // Iniciar la siguiente conversi�n
         }
 

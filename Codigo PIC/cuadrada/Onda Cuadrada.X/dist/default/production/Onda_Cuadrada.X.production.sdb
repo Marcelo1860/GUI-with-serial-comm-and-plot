@@ -129,7 +129,7 @@
 [v _T1CONbits T1CONbits `VES190  1 e 1 @16 ]
 "1038
 [v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
-[s S542 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S540 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -139,18 +139,18 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "1068
-[s S551 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S549 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S555 . 1 `uc 1 . 1 0 :6:0 
+[s S553 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 nRC8 1 0 :1:6 
 ]
-[s S558 . 1 `uc 1 . 1 0 :6:0 
+[s S556 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[u S561 . 1 `S542 1 . 1 0 `S551 1 . 1 0 `S555 1 . 1 0 `S558 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES561  1 e 1 @24 ]
+[u S559 . 1 `S540 1 . 1 0 `S549 1 . 1 0 `S553 1 . 1 0 `S556 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES559  1 e 1 @24 ]
 "1133
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1238
@@ -190,7 +190,7 @@
 "1433
 [u S31 . 1 `S22 1 . 1 0 ]
 [v _TRISAbits TRISAbits `VES31  1 e 1 @133 ]
-[s S462 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S460 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -200,8 +200,8 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1557
-[u S471 . 1 `S462 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES471  1 e 1 @135 ]
+[u S469 . 1 `S460 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES469  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1664
@@ -231,7 +231,7 @@
 ]
 [u S329 . 1 `S318 1 . 1 0 `S324 1 . 1 0 ]
 [v _OSCCONbits OSCCONbits `VES329  1 e 1 @143 ]
-[s S483 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S481 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -241,15 +241,15 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2582
-[s S492 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S490 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
 ]
-[s S496 . 1 `uc 1 . 1 0 :6:0 
+[s S494 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S499 . 1 `S483 1 . 1 0 `S492 1 . 1 0 `S496 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES499  1 e 1 @152 ]
+[u S497 . 1 `S481 1 . 1 0 `S490 1 . 1 0 `S494 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES497  1 e 1 @152 ]
 "2642
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2970
@@ -263,7 +263,7 @@
 "2991
 [u S121 . 1 `S115 1 . 1 0 ]
 [v _ADCON1bits ADCON1bits `VES121  1 e 1 @159 ]
-[s S520 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S518 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -273,8 +273,8 @@
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "3352
-[u S529 . 1 `S520 1 . 1 0 ]
-[v _BAUDCTLbits BAUDCTLbits `VES529  1 e 1 @391 ]
+[u S527 . 1 `S518 1 . 1 0 ]
+[v _BAUDCTLbits BAUDCTLbits `VES527  1 e 1 @391 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 [s S43 . 1 `uc 1 ANS0 1 0 :1:0 
@@ -348,21 +348,21 @@
 {
 [v strcpy@to to `*.4uc  1 a 1 wreg ]
 "15
-[v strcpy@cp cp `*.4uc  1 a 1 1 ]
+[v strcpy@cp cp `*.4uc  1 a 1 2 ]
 "8
 [v strcpy@to to `*.4uc  1 a 1 wreg ]
 [v strcpy@from from `*.24DCuc  1 p 1 0 ]
 "18
-[v strcpy@to to `*.4uc  1 a 1 2 ]
+[v strcpy@to to `*.4uc  1 a 1 1 ]
 "24
 } 0
 "505 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-[u S819 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
+[u S817 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
 "543
-[v sprintf@tmpval tmpval `S819  1 a 4 14 ]
+[v sprintf@tmpval tmpval `S817  1 a 4 14 ]
 "545
 [v sprintf@val val `ul  1 a 4 8 ]
 "533
