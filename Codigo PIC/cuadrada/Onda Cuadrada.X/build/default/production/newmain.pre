@@ -2822,7 +2822,7 @@ PIE1bits.ADIE = 0;
 
 for(int i=0; i<=40; i++){
 strcpy(buffer,"   ");
-datoenv = muestras[i]*(5.0/1023.0);
+datoenv = muestras[i]*(1.0/1023.0);
 sprintf(buffer, "%f", datoenv);
 buffer[19] = ';';
 uart_send_text(buffer);

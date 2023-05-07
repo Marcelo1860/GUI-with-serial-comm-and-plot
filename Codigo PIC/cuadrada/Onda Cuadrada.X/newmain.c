@@ -37,7 +37,7 @@ int main()
         // Hacer algo con las muestras
         for(int i=0; i<=40; i++){
             strcpy(buffer,"   ");
-            datoenv = muestras[i]*(5.0/1023.0);
+            datoenv = muestras[i]*(1.0/1023.0);
             sprintf(buffer, "%f", datoenv);// utiliza sprintf para convertir el n�mero a una cadena de caracteres
             buffer[19] = ';';
             uart_send_text(buffer);    

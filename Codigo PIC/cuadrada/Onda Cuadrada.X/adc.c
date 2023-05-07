@@ -9,8 +9,8 @@ void init_ADC(void)
     set_CHANNEL(0);
     ADCON0bits.ADCS = 0b001;     //SETEA Tad CON FOSC/8 1uS
     ADCON1bits.ADFM = 1;        //JUSTIFICADO A LA DERECHA
-    ADCON1bits.VCFG1 = 0;       //REFERENCIA NEGATIVA A VSS
-    ADCON1bits.VCFG0 = 0;       //REFERENCIA POSITIVA A VDD
+    ADCON1bits.VCFG1 = 1;       //REFERENCIA NEGATIVA A VSS
+    ADCON1bits.VCFG0 = 1;       //REFERENCIA POSITIVA A VDD
     ADCON0bits.ADON = 1;        // ENCIENDE EL MODULO
 
     __delay_ms(100);        

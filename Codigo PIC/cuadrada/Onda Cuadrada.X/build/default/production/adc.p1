@@ -1588,12 +1588,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc.c: 11: ADCON1bits.ADFM = 1;
 "11
 [e = . . _ADCON1bits 0 4 -> -> 1 `i `uc ]
-[; ;adc.c: 12: ADCON1bits.VCFG1 = 0;
+[; ;adc.c: 12: ADCON1bits.VCFG1 = 1;
 "12
-[e = . . _ADCON1bits 0 2 -> -> 0 `i `uc ]
-[; ;adc.c: 13: ADCON1bits.VCFG0 = 0;
+[e = . . _ADCON1bits 0 2 -> -> 1 `i `uc ]
+[; ;adc.c: 13: ADCON1bits.VCFG0 = 1;
 "13
-[e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
+[e = . . _ADCON1bits 0 1 -> -> 1 `i `uc ]
 [; ;adc.c: 14: ADCON0bits.ADON = 1;
 "14
 [e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]

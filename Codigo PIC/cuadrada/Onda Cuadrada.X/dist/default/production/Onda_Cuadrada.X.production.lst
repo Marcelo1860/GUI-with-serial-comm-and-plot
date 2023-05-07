@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Mon May 01 16:42:35 2023
+                                                                                               Sat May 06 16:15:37 2023
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og9 
      1                           	processor	16F887
@@ -1518,12 +1518,12 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og9
   1504     0B12  30B7               	movlw	(low (_buffer| 0))& (0+255)
   1505     0B13  160A  118A  273F  120A  158A  	fcall	_strcpy
   1506                           
-  1507                           ;newmain.c: 40: datoenv = muestras[i]*(5.0/1023.0);
-  1508     0B18  3028               	movlw	40
+  1507                           ;newmain.c: 40: datoenv = muestras[i]*(1.0/1023.0);
+  1508     0B18  3020               	movlw	32
   1509     0B19  00B1               	movwf	___ftmul@f1
-  1510     0B1A  30A0               	movlw	160
+  1510     0B1A  3080               	movlw	128
   1511     0B1B  00B2               	movwf	___ftmul@f1+1
-  1512     0B1C  303B               	movlw	59
+  1512     0B1C  303A               	movlw	58
   1513     0B1D  00B3               	movwf	___ftmul@f1+2
   1514     0B1E  0867               	movf	main@i,w
   1515     0B1F  00E6               	movwf	??_main
@@ -6427,11 +6427,11 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og9
   6396     17EA  1683               	bsf	3,5	;RP0=1, select bank1
   6397     17EB  179F               	bsf	31,7	;volatile
   6398                           
-  6399                           ;adc.c: 12: ADCON1bits.VCFG1 = 0;
-  6400     17EC  129F               	bcf	31,5	;volatile
+  6399                           ;adc.c: 12: ADCON1bits.VCFG1 = 1;
+  6400     17EC  169F               	bsf	31,5	;volatile
   6401                           
-  6402                           ;adc.c: 13: ADCON1bits.VCFG0 = 0;
-  6403     17ED  121F               	bcf	31,4	;volatile
+  6402                           ;adc.c: 13: ADCON1bits.VCFG0 = 1;
+  6403     17ED  161F               	bsf	31,4	;volatile
   6404                           
   6405                           ;adc.c: 14: ADCON0bits.ADON = 1;
   6406     17EE  1283               	bcf	3,5	;RP0=0, select bank0
@@ -7297,7 +7297,7 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Mon May 01 16:42:35 2023
+Symbol Table                                                                                   Sat May 06 16:15:37 2023
 
                       pc 0002           ___bmul@product 002F             ___awdiv@sign 002B  
                      fsr 0004      ___wmul@multiplicand 0022             ___ftadd@exp1 0055  

@@ -1820,9 +1820,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;newmain.c: 39: strcpy(buffer,"   ");
 "39
 [e ( _strcpy (2 , &U _buffer :s 1C ]
-[; ;newmain.c: 40: datoenv = muestras[i]*(5.0/1023.0);
+[; ;newmain.c: 40: datoenv = muestras[i]*(1.0/1023.0);
 "40
-[e = _datoenv -> * -> *U + &U _muestras * -> -> _i `ui `ux -> -> # *U &U _muestras `ui `ux `d / .5.0 .1023.0 `f ]
+[e = _datoenv -> * -> *U + &U _muestras * -> -> _i `ui `ux -> -> # *U &U _muestras `ui `ux `d / .1.0 .1023.0 `f ]
 [; ;newmain.c: 41: sprintf(buffer, "%f", datoenv);
 "41
 [e ( _sprintf (1 , (. , &U _buffer :s 2C -> _datoenv `d ]
