@@ -12,9 +12,9 @@ void uart_init(void)
     /*con esto la formula del baudrate es:
      * BaudRate = Fosc/(64*([SPBRGHx:SPBRGx]+1))
      * [SPBRGHx:SPBRGx] =  (Fosc/(16*BaudRate))-1
-     * Fosc = 4000000                           20MHz       8MHZ
-     * BaudRate = 9600                          9600        9600
-     * [SPBRGH:SPBRG] = 25.041 ~= 25         129.2 ~= 130     51
+     * Fosc = 4000000                           20MHz       8MHZ    16MHz
+     * BaudRate = 9600                          9600        9600    9600
+     * [SPBRGH:SPBRG] = 25.041 ~= 25         129.2 ~= 130     51    105
      */
 
     SPBRG = 51;                   //SETEO EL BAUDRATE EN 9600
@@ -72,11 +72,13 @@ void uart_send(char data)
 
 void uart_text_receive(char *buffer)
 {
+        //PIE1bits.RCIE = 0;
         while(1)
         {
         *buffer = uart_receive();
         if(*buffer == ';')              //EL TERMINAL VIRTUAL NO ENVIA CORRECTAMENTE EL '\0'
             {
+            //PIE1bits.RCIE = 1;
             break;
             }
             else{

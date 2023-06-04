@@ -2587,8 +2587,8 @@ T1CONbits.T1CKPS = 0b00;
 T1CONbits.T1SYNC = 0;
 TMR1H = 0xFF;
 TMR1L = 0xE7;
-
-
+PIR1bits.RCIF = 0;
+PIE1bits.RCIE = 1;
 PIR1bits.ADIF = 0;
 PIE1bits.ADIE = 1;
 INTCONbits.PEIE = 1;

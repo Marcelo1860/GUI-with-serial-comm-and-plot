@@ -90,12 +90,20 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 
         global led_state
         if led_state:
-            ser.write(b'd')
+            #bit_zero = b'\x00' 
+            #ser.write(bit_zero)
+            ser.write(b'S 7;')
+            #ser.write(b'\n')
+            #ser.write(b'\r')
             led_state = False
             self.apagado.setText('Encendido')
             self.led.setStyleSheet("background-color: green")
         else:
-            ser.write(b'i')
+            #bit_zero = b'\x00' 
+            #ser.write(bit_zero)
+            ser.write(b'R 7;')
+            #ser.write(b'\n')
+            #ser.write(b'\r')
             led_state = True
             self.apagado.setText('Apagado')
             self.led.setStyleSheet("background-color: black")

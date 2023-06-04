@@ -10,7 +10,8 @@
 
 // Variables globales
 volatile unsigned int muestras[40]; // Array para almacenar las muestras
-volatile unsigned char contador = 0; // Contador de muestras
+volatile unsigned char contador = 0; // Contador de muestras1
+volatile unsigned char contadorLed = 0; // 
 volatile float stop = 1;
 volatile float datoenv = 0;
 int main()
@@ -35,6 +36,10 @@ int main()
         //PIE1bits.TMR1IE = 0;//se desactiva interrupcon del timer1
         PIE1bits.ADIE = 0; // deshabilitar las interrupciones del ADC
         // Hacer algo con las muestras
+        contadorLed ++;
+        if(contadorLed == 3){
+            PORTDbits.RD0 = 1;
+        }
         for(int i=0; i<=40; i++){
             strcpy(buffer,"   ");
             datoenv = muestras[i]*(1.0/1023.0);
@@ -42,6 +47,7 @@ int main()
             buffer[19] = ';';
             uart_send_text(buffer);    
         }
+
         /*strcpy(buffer,"   ");
         sprintf(buffer, "%f",stop );// utiliza sprintf para convertir el n�mero a una cadena de caracteres
         buffer[19] = ';';
@@ -53,12 +59,28 @@ int main()
         ADCON0bits.GO = 1;
         //PIE1bits.TMR1IE = 1;//se activa interrupcon del timer1
         PIE1bits.ADIE = 1; // Habilitar las interrupciones del ADC
+        //PIE1bits.RCIE = 1;
     } 
 
     return (0);
 }
 
 void interrupt TMR1_ISR() {
+    PORTDbits.RD1 = 0;
+    char salida;
+    
+    if(RCIF){
+        RCIF = 0;
+        salida = RCREG;
+        //uart_text_receive(buffer);
+        //uart_send_text(buffer);
+        //PORTDbits.RD0 = ~PORTDbits.RD0;
+        PORTDbits.RD0 = 0;
+        contadorLed = 0;
+    }
+    
+    
+    else{    
         PIR1bits.ADIF = 0; // Limpiar la bandera de interrupción del ADC
         muestras[contador] = ((ADRESH << 8) & 0b1100000000) | ADRESL; // Almacenar el valor de ADRESH y ADRESL en el array de muestras
         //muestras[contador] = ADRESH;
@@ -66,7 +88,7 @@ void interrupt TMR1_ISR() {
         if (contador < 41) {
             ADCON0bits.GO = 1; // Iniciar la siguiente conversi�n
         }
-
+    }
     //PIR1bits.TMR1IF = 0; // Limpiar la bandera de interrupci�n del temporizador 1
 }
 

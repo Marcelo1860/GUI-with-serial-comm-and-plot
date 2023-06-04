@@ -1789,113 +1789,113 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _buffer `*uc ~T0 @X0 1 r1 ]
 "74
 [f ]
-[; ;uart.c: 75: while(1)
-"75
-[e :U 157 ]
-[; ;uart.c: 76: {
+[; ;uart.c: 76: while(1)
 "76
-{
-[; ;uart.c: 77: *buffer = uart_receive();
+[e :U 157 ]
+[; ;uart.c: 77: {
 "77
-[e = *U _buffer ( _uart_receive ..  ]
-[; ;uart.c: 78: if(*buffer == ';')
+{
+[; ;uart.c: 78: *buffer = uart_receive();
 "78
-[e $ ! == -> *U _buffer `ui -> 59 `ui 159  ]
-[; ;uart.c: 79: {
+[e = *U _buffer ( _uart_receive ..  ]
+[; ;uart.c: 79: if(*buffer == ';')
 "79
-{
-[; ;uart.c: 80: break;
+[e $ ! == -> *U _buffer `ui -> 59 `ui 159  ]
+[; ;uart.c: 80: {
 "80
-[e $U 158  ]
-"81
-}
-[; ;uart.c: 81: }
-[e $U 160  ]
-"82
-[e :U 159 ]
-[; ;uart.c: 82: else{
 {
-[; ;uart.c: 83: buffer++;
+[; ;uart.c: 82: break;
+"82
+[e $U 158  ]
 "83
-[e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
+}
+[; ;uart.c: 83: }
+[e $U 160  ]
 "84
+[e :U 159 ]
+[; ;uart.c: 84: else{
+{
+[; ;uart.c: 85: buffer++;
+"85
+[e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
+"86
 }
 [e :U 160 ]
-"85
+"87
 }
 [e :U 156 ]
-"75
+"76
 [e $U 157  ]
 [e :U 158 ]
-[; ;uart.c: 84: }
-[; ;uart.c: 85: }
+[; ;uart.c: 86: }
 [; ;uart.c: 87: }
-"87
+[; ;uart.c: 89: }
+"89
 [e :UE 155 ]
 }
-"89
-[v _uart_send_text `(v ~T0 @X0 1 ef1`*uc ]
-"90
-{
-[; ;uart.c: 89: void uart_send_text(char *buffer)
-[; ;uart.c: 90: {
-[e :U _uart_send_text ]
-"89
-[v _buffer `*uc ~T0 @X0 1 r1 ]
-"90
-[f ]
 "91
-[v _aux `uc ~T0 @X0 1 a ]
-[; ;uart.c: 91: char aux;
-[; ;uart.c: 92: do{
+[v _uart_send_text `(v ~T0 @X0 1 ef1`*uc ]
 "92
+{
+[; ;uart.c: 91: void uart_send_text(char *buffer)
+[; ;uart.c: 92: {
+[e :U _uart_send_text ]
+"91
+[v _buffer `*uc ~T0 @X0 1 r1 ]
+"92
+[f ]
+"93
+[v _aux `uc ~T0 @X0 1 a ]
+[; ;uart.c: 93: char aux;
+[; ;uart.c: 94: do{
+"94
 [e :U 164 ]
 {
-[; ;uart.c: 93: aux = *buffer;
-"93
-[e = _aux *U _buffer ]
-[; ;uart.c: 94: uart_send(aux);
-"94
-[e ( _uart_send (1 _aux ]
-[; ;uart.c: 95: buffer++;
+[; ;uart.c: 95: aux = *buffer;
 "95
-[e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
+[e = _aux *U _buffer ]
+[; ;uart.c: 96: uart_send(aux);
 "96
+[e ( _uart_send (1 _aux ]
+[; ;uart.c: 97: buffer++;
+"97
+[e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
+"98
 }
-[; ;uart.c: 96: }while(*buffer != ';');
+[; ;uart.c: 98: }while(*buffer != ';');
 [e $ != -> *U _buffer `ui -> 59 `ui 164  ]
 [e :U 163 ]
-[; ;uart.c: 97: uart_send('\r');
-"97
-[e ( _uart_send (1 -> -> 13 `ui `uc ]
-[; ;uart.c: 98: uart_send('\n');
-"98
-[e ( _uart_send (1 -> -> 10 `ui `uc ]
-[; ;uart.c: 99: }
+[; ;uart.c: 99: uart_send('\r');
 "99
+[e ( _uart_send (1 -> -> 13 `ui `uc ]
+[; ;uart.c: 100: uart_send('\n');
+"100
+[e ( _uart_send (1 -> -> 10 `ui `uc ]
+[; ;uart.c: 101: }
+"101
 [e :UE 161 ]
 }
-"102
+"104
 [v _reinicia_uart `(v ~T0 @X0 1 ef ]
-"103
+"105
 {
-[; ;uart.c: 102: void reinicia_uart(void)
-[; ;uart.c: 103: {
+[; ;uart.c: 104: void reinicia_uart(void)
+[; ;uart.c: 105: {
 [e :U _reinicia_uart ]
 [f ]
-[; ;uart.c: 104: RCSTAbits.SPEN = 0;
-"104
-[e = . . _RCSTAbits 0 7 -> -> 0 `i `uc ]
-[; ;uart.c: 105: RCSTAbits.CREN = 0;
-"105
-[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
-[; ;uart.c: 106: RCSTAbits.SPEN = 1;
+[; ;uart.c: 106: RCSTAbits.SPEN = 0;
 "106
-[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-[; ;uart.c: 107: RCSTAbits.CREN = 1;
+[e = . . _RCSTAbits 0 7 -> -> 0 `i `uc ]
+[; ;uart.c: 107: RCSTAbits.CREN = 0;
 "107
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-[; ;uart.c: 108: }
+[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
+[; ;uart.c: 108: RCSTAbits.SPEN = 1;
 "108
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
+[; ;uart.c: 109: RCSTAbits.CREN = 1;
+"109
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+[; ;uart.c: 110: }
+"110
 [e :UE 165 ]
 }

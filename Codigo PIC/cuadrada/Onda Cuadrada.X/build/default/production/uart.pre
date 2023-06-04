@@ -2650,11 +2650,13 @@ TXREG = data;
 
 void uart_text_receive(char *buffer)
 {
+
 while(1)
 {
 *buffer = uart_receive();
 if(*buffer == ';')
 {
+
 break;
 }
 else{

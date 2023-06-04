@@ -44,13 +44,25 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S62 . . ]
 "1718
 [v _PIE1bits `VS62 ~T0 @X0 0 e@140 ]
+"358
+[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S12 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"357
+[u S11 `S12 1 ]
+[n S11 . . ]
+"369
+[v _PORTDbits `VS11 ~T0 @X0 0 e@8 ]
 "37 C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\string.h
 [v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
 "194 C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "16 uart1.h
 [v _uart_send_text `(v ~T0 @X0 0 ef1`*uc ]
-"543 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic16f887.h
+"4179 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic16f887.h
+[v _RCIF `Vb ~T0 @X0 0 e@101 ]
+"1140
+[v _RCREG `Vuc ~T0 @X0 0 e@26 ]
+"543
 [s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S19 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
 "542
@@ -1745,181 +1757,235 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;newmain.c: 13: volatile unsigned char contador = 0;
 "14
+[v _contadorLed `Vuc ~T0 @X0 1 e ]
+[i _contadorLed
+-> -> 0 `i `uc
+]
+[; ;newmain.c: 14: volatile unsigned char contadorLed = 0;
+"15
 [v _stop `Vf ~T0 @X0 1 e ]
 [i _stop
 -> -> 1 `i `f
 ]
-[; ;newmain.c: 14: volatile float stop = 1;
-"15
+[; ;newmain.c: 15: volatile float stop = 1;
+"16
 [v _datoenv `Vf ~T0 @X0 1 e ]
 [i _datoenv
 -> -> 0 `i `f
 ]
-[; ;newmain.c: 15: volatile float datoenv = 0;
+[; ;newmain.c: 16: volatile float datoenv = 0;
 [v $root$_main `(v ~T0 @X0 0 e ]
-"16
-[v _main `(i ~T0 @X0 1 ef ]
 "17
+[v _main `(i ~T0 @X0 1 ef ]
+"18
 {
-[; ;newmain.c: 16: int main()
-[; ;newmain.c: 17: {
+[; ;newmain.c: 17: int main()
+[; ;newmain.c: 18: {
 [e :U _main ]
 [f ]
-[; ;newmain.c: 20: OSCCONbits.OSTS = 1;
-"20
-[e = . . _OSCCONbits 0 3 -> -> 1 `i `uc ]
-[; ;newmain.c: 21: OSCCONbits.HTS = 0;
+[; ;newmain.c: 21: OSCCONbits.OSTS = 1;
 "21
-[e = . . _OSCCONbits 0 2 -> -> 0 `i `uc ]
+[e = . . _OSCCONbits 0 3 -> -> 1 `i `uc ]
 [; ;newmain.c: 22: OSCCONbits.HTS = 0;
 "22
 [e = . . _OSCCONbits 0 2 -> -> 0 `i `uc ]
-[; ;newmain.c: 23: OSCCONbits.SCS = 0;
+[; ;newmain.c: 23: OSCCONbits.HTS = 0;
 "23
-[e = . . _OSCCONbits 0 0 -> -> 0 `i `uc ]
-[; ;newmain.c: 24: config_HAL();
+[e = . . _OSCCONbits 0 2 -> -> 0 `i `uc ]
+[; ;newmain.c: 24: OSCCONbits.SCS = 0;
 "24
-[e ( _config_HAL ..  ]
-[; ;newmain.c: 25: init_ADC();
+[e = . . _OSCCONbits 0 0 -> -> 0 `i `uc ]
+[; ;newmain.c: 25: config_HAL();
 "25
-[e ( _init_ADC ..  ]
-[; ;newmain.c: 26: uart_init();
+[e ( _config_HAL ..  ]
+[; ;newmain.c: 26: init_ADC();
 "26
-[e ( _uart_init ..  ]
-[; ;newmain.c: 27: init_inttimer();
+[e ( _init_ADC ..  ]
+[; ;newmain.c: 27: uart_init();
 "27
-[e ( _init_inttimer ..  ]
-[; ;newmain.c: 28: ADCON0bits.GO = 1;
+[e ( _uart_init ..  ]
+[; ;newmain.c: 28: init_inttimer();
 "28
+[e ( _init_inttimer ..  ]
+[; ;newmain.c: 29: ADCON0bits.GO = 1;
+"29
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-[; ;newmain.c: 30: while(1)
-"30
-[e :U 145 ]
-[; ;newmain.c: 31: {
+[; ;newmain.c: 31: while(1)
 "31
+[e :U 145 ]
+[; ;newmain.c: 32: {
+"32
 {
-[; ;newmain.c: 34: while (contador < 41);
-"34
+[; ;newmain.c: 35: while (contador < 41);
+"35
 [e $U 147  ]
 [e :U 148 ]
 [e :U 147 ]
 [e $ < -> _contador `i -> 41 `i 148  ]
 [e :U 149 ]
-[; ;newmain.c: 36: PIE1bits.ADIE = 0;
-"36
+[; ;newmain.c: 37: PIE1bits.ADIE = 0;
+"37
 [e = . . _PIE1bits 0 6 -> -> 0 `i `uc ]
-[; ;newmain.c: 38: for(int i=0; i<=40; i++){
-"38
+[; ;newmain.c: 39: contadorLed ++;
+"39
+[e ++ _contadorLed -> -> 1 `i `uc ]
+[; ;newmain.c: 40: if(contadorLed == 3){
+"40
+[e $ ! == -> _contadorLed `i -> 3 `i 150  ]
+{
+[; ;newmain.c: 41: PORTDbits.RD0 = 1;
+"41
+[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
+"42
+}
+[e :U 150 ]
+[; ;newmain.c: 42: }
+[; ;newmain.c: 43: for(int i=0; i<=40; i++){
+"43
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ <= _i -> 40 `i 150  ]
-[e $U 151  ]
-[e :U 150 ]
-{
-[; ;newmain.c: 39: strcpy(buffer,"   ");
-"39
-[e ( _strcpy (2 , &U _buffer :s 1C ]
-[; ;newmain.c: 40: datoenv = muestras[i]*(1.0/1023.0);
-"40
-[e = _datoenv -> * -> *U + &U _muestras * -> -> _i `ui `ux -> -> # *U &U _muestras `ui `ux `d / .1.0 .1023.0 `f ]
-[; ;newmain.c: 41: sprintf(buffer, "%f", datoenv);
-"41
-[e ( _sprintf (1 , (. , &U _buffer :s 2C -> _datoenv `d ]
-[; ;newmain.c: 42: buffer[19] = ';';
-"42
-[e = *U + &U _buffer * -> -> -> 19 `i `ui `ux -> -> # *U &U _buffer `ui `ux -> -> 59 `ui `uc ]
-[; ;newmain.c: 43: uart_send_text(buffer);
-"43
-[e ( _uart_send_text (1 &U _buffer ]
-"44
-}
-"38
-[e ++ _i -> 1 `i ]
-[e $ <= _i -> 40 `i 150  ]
+[e $ <= _i -> 40 `i 151  ]
+[e $U 152  ]
 [e :U 151 ]
+{
+[; ;newmain.c: 44: strcpy(buffer,"   ");
 "44
+[e ( _strcpy (2 , &U _buffer :s 1C ]
+[; ;newmain.c: 45: datoenv = muestras[i]*(1.0/1023.0);
+"45
+[e = _datoenv -> * -> *U + &U _muestras * -> -> _i `ui `ux -> -> # *U &U _muestras `ui `ux `d / .1.0 .1023.0 `f ]
+[; ;newmain.c: 46: sprintf(buffer, "%f", datoenv);
+"46
+[e ( _sprintf (1 , (. , &U _buffer :s 2C -> _datoenv `d ]
+[; ;newmain.c: 47: buffer[19] = ';';
+"47
+[e = *U + &U _buffer * -> -> -> 19 `i `ui `ux -> -> # *U &U _buffer `ui `ux -> -> 59 `ui `uc ]
+[; ;newmain.c: 48: uart_send_text(buffer);
+"48
+[e ( _uart_send_text (1 &U _buffer ]
+"49
 }
-[; ;newmain.c: 44: }
-[; ;newmain.c: 52: contador = 0;
-"52
+"43
+[e ++ _i -> 1 `i ]
+[e $ <= _i -> 40 `i 151  ]
+[e :U 152 ]
+"49
+}
+[; ;newmain.c: 49: }
+[; ;newmain.c: 58: contador = 0;
+"58
 [e = _contador -> -> 0 `i `uc ]
-[; ;newmain.c: 53: ADCON0bits.GO = 1;
-"53
+[; ;newmain.c: 59: ADCON0bits.GO = 1;
+"59
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-[; ;newmain.c: 55: PIE1bits.ADIE = 1;
-"55
+[; ;newmain.c: 61: PIE1bits.ADIE = 1;
+"61
 [e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
-"56
+"63
 }
 [e :U 144 ]
-"30
+"31
 [e $U 145  ]
 [e :U 146 ]
-[; ;newmain.c: 56: }
-[; ;newmain.c: 58: return (0);
-"58
+[; ;newmain.c: 63: }
+[; ;newmain.c: 65: return (0);
+"65
 [e ) -> 0 `i ]
 [e $UE 143  ]
-[; ;newmain.c: 59: }
-"59
+[; ;newmain.c: 66: }
+"66
 [e :UE 143 ]
 }
 [v $root$_TMR1_ISR `(v ~T0 @X0 0 e ]
-[v F1649 `(v ~T0 @X0 1 tf ]
-"61
-[v _TMR1_ISR `IF1649 ~T0 @X0 1 e ]
+[v F1650 `(v ~T0 @X0 1 tf ]
+"68
+[v _TMR1_ISR `IF1650 ~T0 @X0 1 e ]
 {
-[; ;newmain.c: 61: void interrupt TMR1_ISR() {
+[; ;newmain.c: 68: void interrupt TMR1_ISR() {
 [e :U _TMR1_ISR ]
 [f ]
-[; ;newmain.c: 62: PIR1bits.ADIF = 0;
-"62
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-[; ;newmain.c: 63: muestras[contador] = ((ADRESH << 8) & 0b1100000000) | ADRESL;
-"63
-[e = *U + &U _muestras * -> _contador `ux -> -> # *U &U _muestras `ui `ux -> | & << -> _ADRESH `i -> 8 `i -> 768 `i -> _ADRESL `i `ui ]
-[; ;newmain.c: 65: contador++;
-"65
-[e ++ _contador -> -> 1 `i `uc ]
-[; ;newmain.c: 66: if (contador < 41) {
-"66
-[e $ ! < -> _contador `i -> 41 `i 154  ]
+[; ;newmain.c: 69: PORTDbits.RD1 = 0;
+"69
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+"70
+[v _salida `uc ~T0 @X0 1 a ]
+[; ;newmain.c: 70: char salida;
+[; ;newmain.c: 72: if(RCIF){
+"72
+[e $ ! _RCIF 155  ]
 {
-[; ;newmain.c: 67: ADCON0bits.GO = 1;
-"67
-[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-"68
-}
-[e :U 154 ]
-[; ;newmain.c: 68: }
-[; ;newmain.c: 71: }
-"71
-[e :UE 153 ]
-}
+[; ;newmain.c: 73: RCIF = 0;
 "73
-[v _config_HAL `(v ~T0 @X0 1 ef ]
+[e = _RCIF -> -> 0 `i `b ]
+[; ;newmain.c: 74: salida = RCREG;
 "74
+[e = _salida _RCREG ]
+[; ;newmain.c: 78: PORTDbits.RD0 = 0;
+"78
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+[; ;newmain.c: 79: contadorLed = 0;
+"79
+[e = _contadorLed -> -> 0 `i `uc ]
+"80
+}
+[; ;newmain.c: 80: }
+[e $U 156  ]
+"83
+[e :U 155 ]
+[; ;newmain.c: 83: else{
 {
-[; ;newmain.c: 73: void config_HAL(void)
-[; ;newmain.c: 74: {
+[; ;newmain.c: 84: PIR1bits.ADIF = 0;
+"84
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;newmain.c: 85: muestras[contador] = ((ADRESH << 8) & 0b1100000000) | ADRESL;
+"85
+[e = *U + &U _muestras * -> _contador `ux -> -> # *U &U _muestras `ui `ux -> | & << -> _ADRESH `i -> 8 `i -> 768 `i -> _ADRESL `i `ui ]
+[; ;newmain.c: 87: contador++;
+"87
+[e ++ _contador -> -> 1 `i `uc ]
+[; ;newmain.c: 88: if (contador < 41) {
+"88
+[e $ ! < -> _contador `i -> 41 `i 157  ]
+{
+[; ;newmain.c: 89: ADCON0bits.GO = 1;
+"89
+[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
+"90
+}
+[e :U 157 ]
+"91
+}
+[e :U 156 ]
+[; ;newmain.c: 90: }
+[; ;newmain.c: 91: }
+[; ;newmain.c: 93: }
+"93
+[e :UE 154 ]
+}
+"95
+[v _config_HAL `(v ~T0 @X0 1 ef ]
+"96
+{
+[; ;newmain.c: 95: void config_HAL(void)
+[; ;newmain.c: 96: {
 [e :U _config_HAL ]
 [f ]
-[; ;newmain.c: 75: TRISD = 0x00;
-"75
+[; ;newmain.c: 97: TRISD = 0x00;
+"97
 [e = _TRISD -> -> 0 `i `uc ]
-[; ;newmain.c: 76: TRISE = 0x00;
-"76
+[; ;newmain.c: 98: TRISE = 0x00;
+"98
 [e = _TRISE -> -> 0 `i `uc ]
-[; ;newmain.c: 77: ANSEL = 0x00;
-"77
+[; ;newmain.c: 99: ANSEL = 0x00;
+"99
 [e = _ANSEL -> -> 0 `i `uc ]
-[; ;newmain.c: 78: ANSELH = 0x00;
-"78
+[; ;newmain.c: 100: ANSELH = 0x00;
+"100
 [e = _ANSELH -> -> 0 `i `uc ]
-[; ;newmain.c: 79: }
-"79
-[e :UE 155 ]
+[; ;newmain.c: 101: }
+"101
+[e :UE 158 ]
 }
 [p f _sprintf 8396800 ]
 [a 2C 37 102 0 ]

@@ -1578,6 +1578,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;inttimer.c: 10: TMR1L = 0xE7;
 "10
 [e = _TMR1L -> -> 231 `i `uc ]
+[; ;inttimer.c: 11: PIR1bits.RCIF = 0;
+"11
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;inttimer.c: 12: PIE1bits.RCIE = 1;
+"12
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
 [; ;inttimer.c: 13: PIR1bits.ADIF = 0;
 "13
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
